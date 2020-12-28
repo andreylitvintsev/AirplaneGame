@@ -18,6 +18,7 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.gitattributes" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" />
       </list>
     </option>
   </component>
@@ -63,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609179730633</updated>
-      <workItem from="1609179752322" duration="722000" />
+      <workItem from="1609179752322" duration="1119000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1609180091112</created>
@@ -93,7 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609180478065</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add packages&#10;&#10;- Polybrush&#10;- ProBuilder&#10;- ProGrids">
+      <created>1609180840422</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1609180840422</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Player scripts">
+      <created>1609180882700</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609180882700</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +122,9 @@
     <MESSAGE value="Add .gitattributes" />
     <MESSAGE value="Init project" />
     <MESSAGE value="Enable LF line-ending by default" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enable LF line-ending by default" />
+    <MESSAGE value="Add packages&#10;&#10;- Polybrush&#10;- ProBuilder&#10;- ProGrids" />
+    <MESSAGE value="Add Player scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Player scripts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609180341034">
