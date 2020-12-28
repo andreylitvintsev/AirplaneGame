@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="" />
+    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/AirplaneMaterial.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/AirplaneMaterial.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +25,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.gitattributes" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/PathCre.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPathCreator.cs" />
       </list>
     </option>
   </component>
@@ -64,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1609179730633</updated>
-      <workItem from="1609179752322" duration="1119000" />
+      <workItem from="1609179752322" duration="3183000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1609180091112</created>
@@ -108,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609180882700</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add stub &quot;Airplane&quot; prefab">
+      <created>1609182464264</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609182464264</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +139,8 @@
     <MESSAGE value="Enable LF line-ending by default" />
     <MESSAGE value="Add packages&#10;&#10;- Polybrush&#10;- ProBuilder&#10;- ProGrids" />
     <MESSAGE value="Add Player scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Player scripts" />
+    <MESSAGE value="Add stub &quot;Airplane&quot; prefab" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add stub &quot;Airplane&quot; prefab" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609180341034">
