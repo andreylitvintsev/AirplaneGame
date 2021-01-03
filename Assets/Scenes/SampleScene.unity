@@ -509,6 +509,11 @@ PrefabInstance:
       propertyPath: editorData.displayControlPoints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.globalDisplaySettingsFoldout
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011522, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: m_RootOrder

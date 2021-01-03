@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VectorExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/VectorExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/VectorExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/VectorExtensions.cs.meta" afterDir="false" />
-    </list>
+    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +22,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Prefabs/Enemy.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scripts/Common/EnemyMark.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,8 +37,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyDetector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ColliderRuntimeSet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyMark.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/RuntimeSet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/EnemyMark.cs" />
       </list>
     </option>
   </component>
@@ -154,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1609687750399</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add 'attack' logic for enemy">
+      <created>1609694146595</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1609694146595</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add 'attack' logic for enemy">
+      <created>1609694178062</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609694178062</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +190,8 @@
     <MESSAGE value="Add Player scripts" />
     <MESSAGE value="Add stub &quot;Airplane&quot; prefab" />
     <MESSAGE value="Add &quot;EnemyWithPrefab&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;EnemyWithPrefab&quot;" />
+    <MESSAGE value="Add 'attack' logic for enemy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add 'attack' logic for enemy" />
   </component>
   <component name="WindowStateProjectService">
     <state width="2517" height="375" key="GridCell.Tab.0.bottom" timestamp="1609693642399">
@@ -210,9 +218,13 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1102" y="230" key="RollbackChangesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609687493779" />
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609180341034">
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609694303150">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1609180341034" />
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1609694303150" />
+    <state x="1081" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609694299285">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1081" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609694299285" />
   </component>
 </project>
