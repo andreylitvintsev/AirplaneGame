@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7308306768962681363, guid: 95189acf587ce7740a812a3699c465d4,
+        type: 3}
+      propertyPath: _speed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95189acf587ce7740a812a3699c465d4, type: 3}
 --- !u!1 &705507993
@@ -453,6 +458,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1654715535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2249677613069514884, guid: 32fde7be9e95db14987c72fc680233e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 5272409682718287404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1654715542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654715535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ee4b5a5c60446e81cc34f7b3fb6ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackTargets: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47, type: 2}
 --- !u!1001 &5272409682718287404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -460,6 +484,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4855190220821877573, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.showNormals
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.showDisplayOptions
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.displayAnchorPoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.displayControlPoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011522, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: m_RootOrder
