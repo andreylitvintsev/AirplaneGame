@@ -56,11 +56,12 @@
           <e p="Common" t="Include">
             <e p="ColliderRuntimeSet.cs" t="Include" />
             <e p="EnemyMark.cs" t="Include" />
+            <e p="RocketController.cs" t="Include" />
             <e p="RuntimeSet.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />
           </e>
           <e p="Enemy" t="Include">
-            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
             <e p="EnemyPathCreator.cs" t="Include" />
           </e>
           <e p="Player" t="Include">

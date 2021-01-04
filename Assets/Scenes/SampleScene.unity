@@ -477,6 +477,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackTargets: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47, type: 2}
+  _reloadDelayInSeconds: 2
+  _rocketPrefab: {fileID: -4459674650875211760, guid: 79def72a6e00f084781f8de85dbd5c26,
+    type: 3}
 --- !u!1001 &5272409682718287404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -498,6 +501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: editorData.showDisplayOptions
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.vertexPathUpToDate
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
