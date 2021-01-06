@@ -13,10 +13,8 @@
     <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Rocket.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +25,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/1f/76c05c7e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/99/51d46570/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -46,8 +47,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EnemyMark.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/MoveBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/GenericGameObjectPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/CollectionsExtensions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/RocketPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/RocketsPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/AutoReturnable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/RocketController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/RocketAutoPoolReturnable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/GenericAutoPoolReturnable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/GenericPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/IPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/AutoPoolReturnable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameObjectsPool.cs" />
       </list>
     </option>
   </component>
@@ -61,8 +73,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34995976" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30008045" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3547995" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30417174" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -79,10 +91,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14752">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="14752" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -98,7 +110,11 @@
       <option name="presentableId" value="Default" />
       <updated>1609179730633</updated>
       <workItem from="1609179752322" duration="3183000" />
-      <workItem from="1609789946044" duration="2430000" />
+      <workItem from="1609789946044" duration="2728000" />
+      <workItem from="1609871614704" duration="5475000" />
+      <workItem from="1609968241715" duration="145000" />
+      <workItem from="1609968413428" duration="122000" />
+      <workItem from="1609968573399" duration="1081000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1609180091112</created>
@@ -177,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609695467186</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add launch of rockets">
+      <created>1609792609071</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609792609071</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,88 +232,173 @@
     <MESSAGE value="Add &quot;EnemyWithPrefab&quot;" />
     <MESSAGE value="Add 'attack' logic for enemy" />
     <MESSAGE value="Add &quot;Rocket&quot; prefab" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;Rocket&quot; prefab" />
+    <MESSAGE value="Add launch of rockets" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add launch of rockets" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="375" key="GridCell.Tab.0.bottom" timestamp="1609695488268">
+    <state x="1550" y="448" key="#xdebugger.evaluate" timestamp="1609968808845">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.0.center" timestamp="1609695488267">
+    <state x="1550" y="448" key="#xdebugger.evaluate/0.0.2560.1040@0.0.2560.1040" timestamp="1609968808845" />
+    <state width="580" height="464" key="DebuggerActiveHint" timestamp="1609968744169">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488267" />
-    <state width="2517" height="375" key="GridCell.Tab.0.left" timestamp="1609695488267">
+    <state width="580" height="464" key="DebuggerActiveHint/0.0.2560.1040@0.0.2560.1040" timestamp="1609968744169" />
+    <state width="2500" height="376" key="GridCell.Tab.0.bottom" timestamp="1609968646263">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488267" />
-    <state width="2517" height="375" key="GridCell.Tab.0.right" timestamp="1609695488267">
+    <state width="2500" height="376" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609968646263" />
+    <state width="2500" height="376" key="GridCell.Tab.0.center" timestamp="1609968646263">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488267" />
-    <state width="2517" height="375" key="GridCell.Tab.1.bottom" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609968646263" />
+    <state width="2500" height="376" key="GridCell.Tab.0.left" timestamp="1609968646262">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.1.center" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609968646262" />
+    <state width="2500" height="376" key="GridCell.Tab.0.right" timestamp="1609968646263">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.1.left" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609968646263" />
+    <state width="2500" height="376" key="GridCell.Tab.1.bottom" timestamp="1609968719669">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.1.right" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.1.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609968719669" />
+    <state width="2500" height="376" key="GridCell.Tab.1.center" timestamp="1609968719669">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.1.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.2.bottom" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.1.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609968719669" />
+    <state width="2500" height="376" key="GridCell.Tab.1.left" timestamp="1609968719669">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.2.center" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.1.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609968719669" />
+    <state width="2500" height="376" key="GridCell.Tab.1.right" timestamp="1609968719669">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.2.left" timestamp="1609695488268">
+    <state width="2500" height="376" key="GridCell.Tab.1.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609968719669" />
+    <state width="2500" height="378" key="GridCell.Tab.2.bottom" timestamp="1609968536307">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.2.right" timestamp="1609695488268">
+    <state width="2500" height="378" key="GridCell.Tab.2.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536307" />
+    <state width="2500" height="378" key="GridCell.Tab.2.center" timestamp="1609968536306">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.2.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.3.bottom" timestamp="1609695488268">
+    <state width="2500" height="378" key="GridCell.Tab.2.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536306" />
+    <state width="2500" height="378" key="GridCell.Tab.2.left" timestamp="1609968536306">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.3.center" timestamp="1609695488268">
+    <state width="2500" height="378" key="GridCell.Tab.2.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536306" />
+    <state width="2500" height="378" key="GridCell.Tab.2.right" timestamp="1609968536306">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.3.left" timestamp="1609695488268">
+    <state width="2500" height="378" key="GridCell.Tab.2.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536306" />
+    <state width="2500" height="378" key="GridCell.Tab.3.bottom" timestamp="1609968536307">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state width="2517" height="375" key="GridCell.Tab.3.right" timestamp="1609695488268">
+    <state width="2500" height="378" key="GridCell.Tab.3.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536307" />
+    <state width="2500" height="378" key="GridCell.Tab.3.center" timestamp="1609968536307">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="375" key="GridCell.Tab.3.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609695488268" />
-    <state x="1108" y="194" key="RiderGenerateDialog" timestamp="1609692245524">
+    <state width="2500" height="378" key="GridCell.Tab.3.center/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536307" />
+    <state width="2500" height="378" key="GridCell.Tab.3.left" timestamp="1609968536307">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1108" y="194" key="RiderGenerateDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609692245524" />
+    <state width="2500" height="378" key="GridCell.Tab.3.left/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536307" />
+    <state width="2500" height="378" key="GridCell.Tab.3.right" timestamp="1609968536307">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state width="2500" height="378" key="GridCell.Tab.3.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609968536307" />
+    <state x="1108" y="194" key="RiderGenerateDialog" timestamp="1609874935464">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1108" y="194" key="RiderGenerateDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609874935464" />
     <state x="1102" y="230" key="RollbackChangesDialog" timestamp="1609687493779">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1102" y="230" key="RollbackChangesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609687493779" />
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609695468466">
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1609792665860">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1609695468466" />
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1609792665860" />
+    <state x="886" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609873798055">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="886" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1609873798055" />
+    <state x="1097" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609873572390">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1097" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1040@0.0.2560.1040" timestamp="1609873572390" />
     <state x="1081" y="426" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1609694299285">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1081" y="426" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609694299285" />
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1609876614054">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="943" y="225" width="672" height="678" key="search.everywhere.popup/0.0.2560.1040@0.0.2560.1040" timestamp="1609876614054" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Common/GameObjectsPool.cs</url>
+          <line>31</line>
+          <properties documentPath="D:\workspace\Unity\AirplaneGame\Assets\Scripts\Common\GenericPool.cs" initialLine="30" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs</url>
+          <line>64</line>
+          <properties documentPath="D:\workspace\Unity\AirplaneGame\Assets\Scripts\Enemy\EnemyController.cs" initialLine="66">
+            <startOffsets>
+              <option value="1973" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2034" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Common/GameObjectsPool.cs</url>
+          <line>40</line>
+          <properties documentPath="D:\workspace\Unity\AirplaneGame\Assets\Scripts\Common\GameObjectsPool.cs" initialLine="39">
+            <startOffsets>
+              <option value="1218" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1254" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Common/AutoPoolReturnable.cs</url>
+          <line>19</line>
+          <properties documentPath="D:\workspace\Unity\AirplaneGame\Assets\Scripts\Common\AutoPoolReturnable.cs" initialLine="19">
+            <startOffsets>
+              <option value="669" />
+            </startOffsets>
+            <endOffsets>
+              <option value="687" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Common/AutoPoolReturnable.cs</url>
+          <line>12</line>
+          <properties documentPath="D:\workspace\Unity\AirplaneGame\Assets\Scripts\Common\AutoPoolReturnable.cs" initialLine="14">
+            <startOffsets>
+              <option value="441" />
+            </startOffsets>
+            <endOffsets>
+              <option value="597" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

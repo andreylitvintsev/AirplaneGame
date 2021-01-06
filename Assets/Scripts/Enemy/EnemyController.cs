@@ -9,6 +9,7 @@ namespace Enemy
     {
         [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
+        [SerializeField] private GameObjectsPool _rocketsPool;
 
         private float _spendTimeFromLastAttack;
 
@@ -26,6 +27,11 @@ namespace Enemy
             if (_rocketPrefab == null)
             {
                 Debug.LogError("'Rocket prefab' must be not null!");
+            }
+            
+            if (_rocketsPool == null)
+            {
+                Debug.LogError("'Rockets pool' must be not null!");
             }
 
             _pathFollower = GetComponent<PathFollower>();
@@ -54,10 +60,11 @@ namespace Enemy
 
         private void LaunchRocket()
         {
-            var cachedTransform = transform;
-            var rocketInstance = Instantiate(
-                _rocketPrefab, cachedTransform.position, cachedTransform.rotation);
-            rocketInstance.ParentSpeed = _pathFollower.speed;
+            if (_rocketsPool.Get(out var result, transform))
+            {
+                var rocketInstance = result.GetComponent<RocketController>();
+                rocketInstance.ParentSpeed = _pathFollower.speed;
+            }
         }
     }
 }

@@ -428,6 +428,82 @@ MonoBehaviour:
   _playerController: {fileID: 388496980}
   _longitudinalAngleBound: 10
   _followingDistance: 3
+--- !u!1 &1033669655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033669657}
+  - component: {fileID: 1033669656}
+  m_Layer: 0
+  m_Name: RocketsPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1033669656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033669655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17ca59104db0460c96a345110774d9c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialInstancesCount: 10
+  _prefab: {fileID: 6924888873361303015, guid: 79def72a6e00f084781f8de85dbd5c26, type: 3}
+  _autoReturnAfterSec: 5
+--- !u!4 &1033669657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033669655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.123047, y: 14.187012, z: 35.62024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1075324084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075324085}
+  m_Layer: 0
+  m_Name: === Managers ===
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1075324085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075324084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.123047, y: 14.187012, z: 35.62024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1596350241
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,6 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _attackTargets: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47, type: 2}
   _reloadDelayInSeconds: 2
+  _rocketsPool: {fileID: 1033669656}
   _rocketPrefab: {fileID: -4459674650875211760, guid: 79def72a6e00f084781f8de85dbd5c26,
     type: 3}
 --- !u!1001 &5272409682718287404
