@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Common
+namespace Common.Pool
 {
     public class AutoPoolReturnable : MonoBehaviour
     {

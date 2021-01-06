@@ -54,11 +54,13 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Common" t="Include">
-            <e p="AutoPoolReturnable.cs" t="Include" />
             <e p="CollectionsExtensions.cs" t="Include" />
             <e p="ColliderRuntimeSet.cs" t="Include" />
             <e p="EnemyMark.cs" t="Include" />
-            <e p="GameObjectsPool.cs" t="Include" />
+            <e p="Pool" t="Include">
+              <e p="AutoPoolReturnable.cs" t="Include" />
+              <e p="GameObjectsPool.cs" t="Include" />
+            </e>
             <e p="RocketController.cs" t="Include" />
             <e p="RuntimeSet.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />

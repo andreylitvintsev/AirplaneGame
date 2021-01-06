@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Common
+namespace Common.Pool
 {
     public class GameObjectsPool : MonoBehaviour
     {
