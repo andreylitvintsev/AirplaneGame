@@ -17,6 +17,10 @@ MonoBehaviour:
   _speed: 5
   _invertHorizontal: 1
   _invertVertical: 0
+  _attackTargets: {fileID: 0}
+  _reloadDelayInSeconds: 2
+  _rocketsPool: {fileID: 0}
+  _fireButtonName: Fire1
 --- !u!1001 &2015406389736228567
 PrefabInstance:
   m_ObjectHideFlags: 0

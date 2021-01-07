@@ -15,6 +15,23 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   endOfPathInstruction: 0
   speed: 5
+--- !u!114 &7745570365100108894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8494923256824252773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ee4b5a5c60446e81cc34f7b3fb6ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _attackTargets: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47, type: 2}
+  _reloadDelayInSeconds: 2
+  _rocketsPool: {fileID: 0}
+  _rocketPrefab: {fileID: -4459674650875211760, guid: 79def72a6e00f084781f8de85dbd5c26,
+    type: 3}
 --- !u!1001 &2591591527385408824
 PrefabInstance:
   m_ObjectHideFlags: 0

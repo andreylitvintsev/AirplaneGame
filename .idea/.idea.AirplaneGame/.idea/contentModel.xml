@@ -57,11 +57,13 @@
             <e p="CollectionsExtensions.cs" t="Include" />
             <e p="ColliderRuntimeSet.cs" t="Include" />
             <e p="EnemyMark.cs" t="Include" />
+            <e p="IRocketLauncherOwner.cs" t="Include" />
             <e p="Pool" t="Include">
               <e p="AutoPoolReturnable.cs" t="Include" />
               <e p="GameObjectsPool.cs" t="Include" />
             </e>
             <e p="RocketController.cs" t="Include" />
+            <e p="RocketLauncher.cs" t="Include" />
             <e p="RuntimeSet.cs" t="Include" />
             <e p="VectorExtensions.cs" t="Include" />
           </e>

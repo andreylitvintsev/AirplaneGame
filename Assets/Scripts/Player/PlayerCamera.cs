@@ -9,7 +9,7 @@ namespace Player
         [SerializeField, Min(0f)] private float _longitudinalAngleBound = 0f;
         [SerializeField, Min(0f)] private float _followingDistance = 0f;
 
-        private void AfterPlayerInputHandled(float verticalInput, float horizontalInput)
+        private void AfterPlayerInputAdjusted(float verticalInput, float horizontalInput)
         {
             var playerTransform = _playerController.transform;
             var newCameraPosition = playerTransform.TransformPoint(
@@ -41,7 +41,7 @@ namespace Player
         {
             if (_playerController != null)
             {
-                _playerController.AfterInputHandled += AfterPlayerInputHandled;
+                _playerController.AfterInputAdjusted += AfterPlayerInputAdjusted;
             }
             else
             {
@@ -53,7 +53,7 @@ namespace Player
         {
             if (_playerController != null)
             {
-                _playerController.AfterInputHandled -= AfterPlayerInputHandled;
+                _playerController.AfterInputAdjusted -= AfterPlayerInputAdjusted;
             }
         }
     }

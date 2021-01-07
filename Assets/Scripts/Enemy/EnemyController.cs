@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using System;
+using Common;
 using Common.Pool;
 using PathCreation.Examples;
 using UnityEngine;
@@ -6,18 +7,23 @@ using UnityEngine;
 namespace Enemy
 {
     [RequireComponent(typeof(PathFollower)), DisallowMultipleComponent]
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : MonoBehaviour, IRocketLauncherOwner
     {
         [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
-
-        private float _spendTimeFromLastAttack;
-
+        
         [SerializeField] private RocketController _rocketPrefab;
 
         private PathFollower _pathFollower;
-        
+
+        private RocketLauncher _rocketLauncher = null;
+
+        private void Awake()
+        {
+            _rocketLauncher = new RocketLauncher(this);
+        }
+
         private void Start()
         {
             if (_attackTargets == null)
@@ -36,12 +42,11 @@ namespace Enemy
             }
 
             _pathFollower = GetComponent<PathFollower>();
-            
-            _spendTimeFromLastAttack = _reloadDelayInSeconds;
         }
 
         private void Update()
         {
+            _rocketLauncher.Update();
             TryFindAndAttack();
         }
 
@@ -50,22 +55,19 @@ namespace Enemy
             var cachedTransform = transform;
             var raycastRay = new Ray(cachedTransform.position, cachedTransform.forward);
             var found = Physics.Raycast(raycastRay, out var hitInfo);
-
-            _spendTimeFromLastAttack += Time.deltaTime; 
-            if (found && _attackTargets.Contains(hitInfo.collider) && _spendTimeFromLastAttack >= _reloadDelayInSeconds)
+            
+            if (found && _attackTargets.Contains(hitInfo.collider))
             {
-                _spendTimeFromLastAttack = 0f;
-                LaunchRocket();
+                _rocketLauncher.LaunchRocket();
             }
         }
 
-        private void LaunchRocket()
-        {
-            if (_rocketsPool.Get(out var result, transform))
-            {
-                var rocketInstance = result.GetComponent<RocketController>();
-                rocketInstance.ParentSpeed = _pathFollower.speed;
-            }
-        }
+        public GameObjectsPool RocketsPool => _rocketsPool;
+
+        public Component RocketLauncherOwner => this;
+
+        public float Speed => _pathFollower.speed;
+
+        public float ReloadDelayInSeconds => _reloadDelayInSeconds;
     }
 }
