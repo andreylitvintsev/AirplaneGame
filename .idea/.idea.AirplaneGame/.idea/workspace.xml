@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/RocketLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/RocketLauncher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +22,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/1f/76c05c7e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/99/51d46570/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scripts/Player/PlayerCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scripts/Common/RocketLauncher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/ProjectSettings/InputManager.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Prefabs/Player.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scripts/Enemy/EnemyController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -121,7 +119,7 @@
       <workItem from="1609968413428" duration="122000" />
       <workItem from="1609968573399" duration="1379000" />
       <workItem from="1610044307102" duration="3574000" />
-      <workItem from="1610302767847" duration="3072000" />
+      <workItem from="1610302767847" duration="3445000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1609180091112</created>
@@ -235,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610047788634</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add player acceleration with animated camera">
+      <created>1610307335961</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610307335961</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +277,8 @@
     <MESSAGE value="Add subfolder &quot;Pool&quot;" />
     <MESSAGE value="Make &quot;Enemy&quot; and &quot;Player&quot; as prefab variant of &quot;Airplane&quot;" />
     <MESSAGE value="Add attack for &quot;Player&quot; (and fix for &quot;Enemy&quot;)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add attack for &quot;Player&quot; (and fix for &quot;Enemy&quot;)" />
+    <MESSAGE value="Add player acceleration with animated camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add player acceleration with animated camera" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1550" y="448" key="#xdebugger.evaluate" timestamp="1609968808845">
@@ -355,10 +361,10 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1102" y="230" key="RollbackChangesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609687493779" />
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1610047789967">
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1610307337365">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610047789967" />
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610307337365" />
     <state x="886" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609873798055">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
