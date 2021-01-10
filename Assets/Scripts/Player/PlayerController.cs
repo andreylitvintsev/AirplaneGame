@@ -10,7 +10,10 @@ namespace Player
         [Header("Speed")]
         [SerializeField, Min(0f)] private float _longitudinalRollSpeed = 0f;
         [SerializeField, Min(0f)] private float _lateralRollSpeed = 0f;
-        [SerializeField, Min(0f)] private float _speed = 0f;
+        [SerializeField, Min(0f)] private float _defaultSpeed = 0f;
+        [SerializeField, Min(0f)] private float _acceleratedSpeed = 0f;
+        
+        private float _speed = 0f;
 
         [Header("Movement")]
         [SerializeField] private bool _invertHorizontal = false;
@@ -50,16 +53,22 @@ namespace Player
             cachedTransform.position += cachedTransform.forward * _speed * deltaTime;
 
             TryAttack();
-            
+            ManipulateAcceleration();
+
             AfterInputAdjusted?.Invoke(verticalInput, horizontalInput);
         }
 
         private void TryAttack()
         {
-            if (Input.GetButton("Fire1"))
+            if (Input.GetButton("Fire"))
             {
-                _rocketLauncher.LaunchRocket();
+                _rocketLauncher.TryLaunchRocket();
             }
+        }
+
+        private void ManipulateAcceleration()
+        {
+            _speed = Input.GetButton("Accelerate") ? _acceleratedSpeed : _defaultSpeed;
         }
 
         public GameObjectsPool RocketsPool => _rocketsPool;

@@ -11,13 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e90157d-27f6-493e-98fd-e2263eb1e3d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AirplaneGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Common/RocketLauncher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Common/RocketLauncher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +31,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/1f/76c05c7e/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0847A0FA-F944-44CC-BAF1-958021B27F54/99/51d46570/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/workspace/Unity/AirplaneGame/Assets/Prefabs/Enemy.prefab.meta" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.gitattributes" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/PathCre.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyPathCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/RuntimeGameObjectSet.cs" />
@@ -63,9 +61,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/GameObjectsPool.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/AutoPoolReturnable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/IRocketLauncherOwner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/RocketLauncher.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" />
       </list>
     </option>
   </component>
@@ -121,7 +120,8 @@
       <workItem from="1609968241715" duration="145000" />
       <workItem from="1609968413428" duration="122000" />
       <workItem from="1609968573399" duration="1379000" />
-      <workItem from="1610044307102" duration="3144000" />
+      <workItem from="1610044307102" duration="3574000" />
+      <workItem from="1610302767847" duration="3072000" />
     </task>
     <task id="LOCAL-00001" summary="Add .gitignore">
       <created>1609180091112</created>
@@ -228,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610045340594</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add attack for &quot;Player&quot; (and fix for &quot;Enemy&quot;)">
+      <created>1610047788634</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610047788634</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,7 +271,8 @@
     <MESSAGE value="Add pool for rockets" />
     <MESSAGE value="Add subfolder &quot;Pool&quot;" />
     <MESSAGE value="Make &quot;Enemy&quot; and &quot;Player&quot; as prefab variant of &quot;Airplane&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make &quot;Enemy&quot; and &quot;Player&quot; as prefab variant of &quot;Airplane&quot;" />
+    <MESSAGE value="Add attack for &quot;Player&quot; (and fix for &quot;Enemy&quot;)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add attack for &quot;Player&quot; (and fix for &quot;Enemy&quot;)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1550" y="448" key="#xdebugger.evaluate" timestamp="1609968808845">
@@ -339,18 +347,18 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state width="2500" height="376" key="GridCell.Tab.3.right/0.0.2560.1040@0.0.2560.1040" timestamp="1609969965730" />
-    <state x="1108" y="194" key="RiderGenerateDialog" timestamp="1610047354739">
+    <state x="1108" y="194" key="RiderGenerateDialog" timestamp="1610303278063">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="1108" y="194" key="RiderGenerateDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1610047354739" />
+    <state x="1108" y="194" key="RiderGenerateDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1610303278063" />
     <state x="1102" y="230" key="RollbackChangesDialog" timestamp="1609687493779">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1102" y="230" key="RollbackChangesDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1609687493779" />
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1610045377034">
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2" timestamp="1610047789967">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610045377034" />
+    <state x="872" y="240" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610047789967" />
     <state x="886" y="131" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609873798055">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>

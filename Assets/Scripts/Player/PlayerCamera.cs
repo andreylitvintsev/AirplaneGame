@@ -3,13 +3,17 @@ using UnityEngine;
 
 namespace Player
 {
+    [RequireComponent(typeof(Camera))]
     public class PlayerCamera : MonoBehaviour
     {
         [SerializeField] private PlayerController _playerController = null;
         [SerializeField, Min(0f)] private float _longitudinalAngleBound = 0f;
         [SerializeField, Min(0f)] private float _followingDistance = 0f;
+        [SerializeField] private Animator _animator = null;
+        
+        private static readonly int IsAcceleratedAnimatorProperty = Animator.StringToHash("IsAccelerated");
 
-        private void AfterPlayerInputAdjusted(float verticalInput, float horizontalInput)
+        private void AfterPlayerInputAdjusted(float verticalInput, float horizontalInput) // TODO: разбить на методы
         {
             var playerTransform = _playerController.transform;
             var newCameraPosition = playerTransform.TransformPoint(
@@ -18,6 +22,13 @@ namespace Player
             
             // TODO: расчитать up вектор (отложить)
             transform.LookAt(playerTransform, playerTransform.up);
+
+            HandleAccelerateInput();
+        }
+
+        private void HandleAccelerateInput()
+        {
+            _animator.SetBool(IsAcceleratedAnimatorProperty, Input.GetButton("Accelerate"));
         }
 
         private void OnDrawGizmosSelected()
@@ -46,6 +57,11 @@ namespace Player
             else
             {
                 Debug.LogError("Player Controller is null", this);
+            }
+            
+            if (_animator == null)
+            {
+                Debug.LogError("'Animator' must be not null!");
             }
         }
 

@@ -161,19 +161,13 @@ PrefabInstance:
     - target: {fileID: 2982058224855494748, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
       propertyPath: _speed
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2982058224855494748, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
       propertyPath: _rocketsPool
       value: 
       objectReference: {fileID: 1033669656}
-    - target: {fileID: 2982058224855494748, guid: b46ed2299f81ea547b5a2ca85de26f23,
-        type: 3}
-      propertyPath: _attackTargets
-      value: 
-      objectReference: {fileID: 11400000, guid: 341b6336de2bd0645be9c55158060641,
-        type: 2}
     - target: {fileID: 5614581481642470026, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
       propertyPath: m_Name
@@ -352,6 +346,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -439,6 +434,26 @@ MonoBehaviour:
   _playerController: {fileID: 827870987}
   _longitudinalAngleBound: 10
   _followingDistance: 3
+  _animator: {fileID: 963194230}
+--- !u!95 &963194230
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebb0a99e991dfd24984c95974b232b32, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1033669655
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: editorData.showNormals
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: editorData.showPathOptions
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}

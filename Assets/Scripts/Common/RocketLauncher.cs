@@ -25,7 +25,7 @@ namespace Common
             _spendTimeFromLastAttack += Time.deltaTime;
         }
         
-        public void LaunchRocket()
+        public void TryLaunchRocket()
         {
             if (_spendTimeFromLastAttack < _rocketLauncherOwner.ReloadDelayInSeconds)
             {

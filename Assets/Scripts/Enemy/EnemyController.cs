@@ -26,7 +26,7 @@ namespace Enemy
 
         private void Start()
         {
-            if (_attackTargets == null)
+            if (_attackTargets == null) // TODO: сделать extension
             {
                 Debug.LogError("'Attack Targets' must be not null!");
             }
@@ -58,7 +58,7 @@ namespace Enemy
             
             if (found && _attackTargets.Contains(hitInfo.collider))
             {
-                _rocketLauncher.LaunchRocket();
+                _rocketLauncher.TryLaunchRocket();
             }
         }
 
