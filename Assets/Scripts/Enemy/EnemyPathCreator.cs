@@ -1,21 +1,20 @@
 ﻿using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Enemy
 {
     [RequireComponent(typeof(PathCreation.PathCreator))]
     public class EnemyPathCreator : MonoBehaviour
     {
-        [SerializeField]
-        private Vector3 FromBounds;
+        [SerializeField] private Vector3 _fromBounds;
 
         [SerializeField]
-        private Vector3 ToBounds;
+        private Vector3 _toBounds;
 
         [SerializeField, Min(2)]
         private int pointCount = 2;
 
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
             var bezierPathCreator = GetComponent<PathCreation.PathCreator>().bezierPath;
             for (int i = 0; i < pointCount; ++i)
@@ -33,16 +32,19 @@ namespace Enemy
         private Vector3 RandomPoint()
         {
             return new Vector3(
-                Random.Range(FromBounds.x, ToBounds.x),
-                Random.Range(FromBounds.y, ToBounds.y),
-                Random.Range(FromBounds.z, ToBounds.z)
+                Random.Range(_fromBounds.x, _toBounds.x),
+                Random.Range(_fromBounds.y, _toBounds.y),
+                Random.Range(_fromBounds.z, _toBounds.z)
             );
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnDrawGizmosSelected() // TODO: можно вынести в partial class
         {
-        
+            var gizmoCubeBounds = new Bounds();
+            gizmoCubeBounds.Encapsulate(_fromBounds);
+            gizmoCubeBounds.Encapsulate(_toBounds);
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireCube(gizmoCubeBounds.center, gizmoCubeBounds.size);
         }
     }
 }

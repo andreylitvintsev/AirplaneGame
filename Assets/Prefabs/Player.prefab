@@ -21,7 +21,7 @@ MonoBehaviour:
   _attackTargets: {fileID: 11400000, guid: 341b6336de2bd0645be9c55158060641, type: 2}
   _reloadDelayInSeconds: 2
   _rocketsPool: {fileID: 0}
-  _fireButtonName: Fire1
+  _fireButtonName: Fire
 --- !u!1001 &2015406389736228567
 PrefabInstance:
   m_ObjectHideFlags: 0

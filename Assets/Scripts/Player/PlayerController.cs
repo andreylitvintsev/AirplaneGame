@@ -23,7 +23,6 @@ namespace Player
         [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
-        [SerializeField] private string _fireButtonName = "Fire1";
 
         private RocketLauncher _rocketLauncher = null;
         
