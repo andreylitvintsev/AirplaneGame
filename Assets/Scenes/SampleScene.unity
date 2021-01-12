@@ -160,11 +160,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2982058224855494748, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
-      propertyPath: _speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2982058224855494748, guid: b46ed2299f81ea547b5a2ca85de26f23,
-        type: 3}
       propertyPath: _rocketsPool
       value: 
       objectReference: {fileID: 1033669656}
@@ -216,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 5614581481642470038, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 5614581481642470038, guid: b46ed2299f81ea547b5a2ca85de26f23,
         type: 3}
@@ -250,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -265,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -506,7 +501,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -521,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -741,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -761,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerController: {fileID: 827870987}
   _longitudinalAngleBound: 10
-  _followingDistance: 3
+  _followingDistance: 20
   _animator: {fileID: 963194230}
 --- !u!95 &963194230
 Animator:
@@ -908,7 +903,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -923,7 +918,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1102,7 +1097,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1117,7 +1112,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1266,7 +1261,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1281,7 +1276,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1499,7 +1494,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _toBounds.y
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1514,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: _fromBounds.y
-      value: -60
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1544,7 +1539,7 @@ PrefabInstance:
     - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
       propertyPath: editorData.vertexPathUpToDate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011521, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}

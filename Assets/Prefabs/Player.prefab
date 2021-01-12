@@ -21,7 +21,6 @@ MonoBehaviour:
   _attackTargets: {fileID: 11400000, guid: 341b6336de2bd0645be9c55158060641, type: 2}
   _reloadDelayInSeconds: 2
   _rocketsPool: {fileID: 0}
-  _fireButtonName: Fire
 --- !u!1001 &2015406389736228567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29,12 +28,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1555525636619606991, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: af3696601d2df9f4190ab9e7c4e4a4cc, type: 2}
     - target: {fileID: 1878110446000980806, guid: 6f6b8be6c5702d84faa67cfbd3885464,
         type: 3}
       propertyPath: _runtimeSet
       value: 
       objectReference: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47,
         type: 2}
+    - target: {fileID: 6202346684736793664, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: af3696601d2df9f4190ab9e7c4e4a4cc, type: 2}
     - target: {fileID: 6202346684736793665, guid: 6f6b8be6c5702d84faa67cfbd3885464,
         type: 3}
       propertyPath: m_RootOrder
@@ -78,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 6202346684736793665, guid: 6f6b8be6c5702d84faa67cfbd3885464,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 6202346684736793665, guid: 6f6b8be6c5702d84faa67cfbd3885464,
         type: 3}
@@ -97,9 +106,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6202346684736793695, guid: 6f6b8be6c5702d84faa67cfbd3885464,
         type: 3}
+      propertyPath: m_LightProbeUsage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202346684736793695, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 04479a067ea29ec49a2d6a736c5a6116, type: 2}
+      objectReference: {fileID: 2100000, guid: 421e2c6f2c6e454408632e9782cf744e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6b8be6c5702d84faa67cfbd3885464, type: 3}
 --- !u!1 &5614581481642470026 stripped
