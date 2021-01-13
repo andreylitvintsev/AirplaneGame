@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6202346684736793695}
   - component: {fileID: -1555525636619606991}
   - component: {fileID: 1878110446000980806}
+  - component: {fileID: 983042583691415215}
   m_Layer: 0
   m_Name: Airplane
   m_TagString: Untagged
@@ -109,6 +110,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runtimeSet: {fileID: 0}
+--- !u!95 &983042583691415215
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202346684736793693}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 008e6cb956c4d7b4fb53c4b06c423431, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6158552008820422119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,7 +189,7 @@ PrefabInstance:
     - target: {fileID: 1666788558860892812, guid: 46238a1eaeff75c4bbb2ce68b53ecba3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1666788558860892812, guid: 46238a1eaeff75c4bbb2ce68b53ecba3,
         type: 3}

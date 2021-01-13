@@ -279,6 +279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
+      propertyPath: pointCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
       propertyPath: _toBounds.x
       value: 100
       objectReference: {fileID: 0}
@@ -532,6 +537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: pointCount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -937,6 +947,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
+      propertyPath: pointCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
       propertyPath: _toBounds.x
       value: 100
       objectReference: {fileID: 0}
@@ -1131,6 +1146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
+      propertyPath: pointCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
       propertyPath: _toBounds.x
       value: 100
       objectReference: {fileID: 0}
@@ -1292,6 +1312,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: pointCount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
@@ -1525,6 +1550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
+        type: 3}
+      propertyPath: pointCount
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5272409682665011520, guid: 32fde7be9e95db14987c72fc680233e9,
         type: 3}
