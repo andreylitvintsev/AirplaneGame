@@ -1,5 +1,4 @@
-﻿using System;
-using Common;
+﻿using Common;
 using Common.Pool;
 using PathCreation.Examples;
 using UnityEngine;
@@ -54,11 +53,12 @@ namespace Enemy
         {
             var cachedTransform = transform;
             var raycastRay = new Ray(cachedTransform.position, cachedTransform.forward);
-            var found = Physics.Raycast(raycastRay, out var hitInfo);
-            
-            if (found && _attackTargets.Contains(hitInfo.collider))
+            foreach (var attackTarget in _attackTargets)
             {
-                _rocketLauncher.TryLaunchRocket();
+                if (attackTarget.Raycast(raycastRay, out _, float.PositiveInfinity))
+                {
+                    _rocketLauncher.TryLaunchRocket();
+                }
             }
         }
 
