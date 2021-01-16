@@ -12,8 +12,6 @@ namespace Enemy
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
         
-        [SerializeField] private RocketController _rocketPrefab;
-
         private PathFollower _pathFollower;
 
         private RocketLauncher _rocketLauncher = null;
@@ -28,11 +26,6 @@ namespace Enemy
             if (_attackTargets == null) // TODO: сделать extension
             {
                 Debug.LogError("'Attack Targets' must be not null!");
-            }
-            
-            if (_rocketPrefab == null)
-            {
-                Debug.LogError("'Rocket prefab' must be not null!");
             }
             
             if (_rocketsPool == null)
