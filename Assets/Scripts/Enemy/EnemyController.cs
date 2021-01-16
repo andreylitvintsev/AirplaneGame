@@ -5,23 +5,26 @@ using UnityEngine;
 
 namespace Enemy
 {
-    [RequireComponent(typeof(PathFollower)), DisallowMultipleComponent]
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(PathFollower))]
     public class EnemyController : MonoBehaviour, IRocketLauncherOwner
     {
         [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
+        [SerializeField] private Animator _animator;
         
         private PathFollower _pathFollower;
+        private AnimationEventReceiver _animationEventReceiver;
 
         private RocketLauncher _rocketLauncher = null;
-
+        
         private void Awake()
         {
             _rocketLauncher = new RocketLauncher(this);
         }
 
-        private void Start()
+        private void Start() // TODO: может awake?
         {
             if (_attackTargets == null) // TODO: сделать extension
             {
@@ -32,14 +35,22 @@ namespace Enemy
             {
                 Debug.LogError("'Rockets pool' must be not null!");
             }
-
+            
             _pathFollower = GetComponent<PathFollower>();
+            _animationEventReceiver = GetComponent<AnimationEventReceiver>();
+            // _animationEventReceiver.OnEvent += OnAnimationEvent;
         }
 
         private void Update()
         {
             _rocketLauncher.Update();
             TryFindAndAttack();
+            
+            // TODO: delete me 
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _animator.SetBool("IsDestroyed", true);
+            }
         }
 
         private void TryFindAndAttack()
@@ -55,6 +66,12 @@ namespace Enemy
             }
         }
 
+        // called from Animation receiver
+        public void OnDestroyAnimationEnd()
+        {
+            Debug.Log("OnDestroyAnimationEnd");
+        }
+        
         public GameObjectsPool RocketsPool => _rocketsPool;
 
         public Component RocketLauncherOwner => this;

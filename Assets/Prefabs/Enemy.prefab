@@ -30,8 +30,7 @@ MonoBehaviour:
   _attackTargets: {fileID: 11400000, guid: 038bcc684cee3ac479e61ff48daa9f47, type: 2}
   _reloadDelayInSeconds: 2
   _rocketsPool: {fileID: 0}
-  _rocketPrefab: {fileID: -4459674650875211760, guid: 79def72a6e00f084781f8de85dbd5c26,
-    type: 3}
+  _animator: {fileID: 3338107161119714199}
 --- !u!1001 &2591591527385408824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,11 +114,57 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3e4b22ba695f3e84f9171fa1e7fcd7f9, type: 2}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].EventName
+      value: Destroy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7745570365100108894}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnDestroyAnimationEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7278284524562576522, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+        type: 3}
+      propertyPath: _receivers.Array.data[0].Callbacks.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6b8be6c5702d84faa67cfbd3885464, type: 3}
 --- !u!1 &8494923256824252773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6202346684736793693, guid: 6f6b8be6c5702d84faa67cfbd3885464,
+    type: 3}
+  m_PrefabInstance: {fileID: 2591591527385408824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3338107161119714199 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 983042583691415215, guid: 6f6b8be6c5702d84faa67cfbd3885464,
     type: 3}
   m_PrefabInstance: {fileID: 2591591527385408824}
   m_PrefabAsset: {fileID: 0}
