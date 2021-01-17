@@ -38,6 +38,7 @@ namespace Common
                 
                 var rocketInstance = result.GetComponent<RocketController>();
                 rocketInstance.ParentSpeed = _rocketLauncherOwner.Speed;
+                rocketInstance.ParentCollider = _rocketLauncherOwner.RocketLauncherOwner.GetComponent<Collider>();
             }
         }
     }
