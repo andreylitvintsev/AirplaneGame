@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Player
 {
-    public class PlayerController : MonoBehaviour, IRocketLauncherOwner
+    public class PlayerController : MonoBehaviour, IRocketLauncherOwner, IDamagable
     {
         [Header("Speed")]
         [SerializeField, Min(0f)] private float _longitudinalRollSpeed = 0f;
@@ -68,6 +68,11 @@ namespace Player
         private void ManipulateAcceleration()
         {
             _speed = Input.GetButton("Accelerate") ? _acceleratedSpeed : _defaultSpeed;
+        }
+
+        public void Damage()
+        {
+            Debug.Log("Конец игры");
         }
 
         public GameObjectsPool RocketsPool => _rocketsPool;

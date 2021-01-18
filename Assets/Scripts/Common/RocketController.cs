@@ -20,7 +20,7 @@ namespace Common
         {
             if (ParentCollider != other)
             {
-                Debug.Log("Атакует"); // TODO: убийство
+                other.GetComponent<IDamagable>()?.Damage();
             }
         }
     }

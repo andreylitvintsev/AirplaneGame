@@ -7,7 +7,7 @@ namespace Enemy
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(PathFollower))]
-    public class EnemyController : MonoBehaviour, IRocketLauncherOwner
+    public class EnemyController : MonoBehaviour, IRocketLauncherOwner, IDamagable
     {
         [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
@@ -18,6 +18,9 @@ namespace Enemy
         private AnimationEventReceiver _animationEventReceiver;
 
         private RocketLauncher _rocketLauncher = null;
+        private static readonly int IsDestroyed = Animator.StringToHash("IsDestroyed");
+
+        public bool Killed { get; private set; } = false;
         
         private void Awake()
         {
@@ -45,14 +48,7 @@ namespace Enemy
         {
             _rocketLauncher.Update();
             TryFindAndAttack();
-            
-            // TODO: delete me 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _animator.SetBool("IsDestroyed", true);
-            }
         }
-
         private void TryFindAndAttack()
         {
             var cachedTransform = transform;
@@ -65,13 +61,21 @@ namespace Enemy
                 }
             }
         }
-
+        
+        public void Damage()
+        {
+            if (Killed) return;
+            Killed = true;
+            _animator.SetBool(IsDestroyed, true);
+        }
+        
         // called from Animation receiver
         public void OnDestroyAnimationEnd()
         {
-            Debug.Log("OnDestroyAnimationEnd");
+            gameObject.SetActive(false);
         }
-        
+
+
         public GameObjectsPool RocketsPool => _rocketsPool;
 
         public Component RocketLauncherOwner => this;
