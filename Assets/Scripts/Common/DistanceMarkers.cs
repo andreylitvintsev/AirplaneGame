@@ -8,6 +8,8 @@ namespace Common
 {
     public class DistanceMarkers : MonoBehaviour
     {
+        [SerializeField] private Camera _camera = null;
+        
         [SerializeField] private Canvas _canvas = null;
         
         [SerializeField] private ColliderRuntimeSet _enemiesSet = null;
@@ -17,6 +19,10 @@ namespace Common
         
         private void Start()
         {
+            if (_camera == null)
+            {
+                Debug.LogError("'Camera' must be not null!");
+            }
             if (_canvas == null)
             {
                 Debug.LogError("'Canvas' must be not null!");
@@ -44,16 +50,17 @@ namespace Common
 
         private void Update()
         {
+            var cameraTransform = _camera.transform;
             foreach (var enemy in _enemiesSet)
             {
+                var enemyTransform = enemy.transform;
                 var marker = _markerMap[enemy];
-                var distanceVector = enemy.transform.position - Camera.main.transform.position;
-                if (Vector3.Dot(distanceVector.normalized, Camera.main.transform.forward) > 0)
+                var distanceVector = enemyTransform.position - cameraTransform.position;
+                if (Vector3.Dot(distanceVector.normalized, cameraTransform.forward) > 0)
                 {
                     marker.enabled = true;
-                    marker.text = ((int)distanceVector.magnitude).ToString(CultureInfo.InvariantCulture);
-                    marker.transform.localPosition =
-                        Camera.main.WorldToScreenPoint(enemy.transform.position);
+                    marker.text = ((int) distanceVector.magnitude).ToString(CultureInfo.InvariantCulture);
+                    marker.transform.localPosition = _camera.WorldToScreenPoint(enemyTransform.position);
                 }
                 else
                 {
