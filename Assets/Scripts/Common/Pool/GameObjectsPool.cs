@@ -13,11 +13,7 @@ namespace Common.Pool
 
         private void OnEnable()
         {
-            if (_prefab == null)
-            {
-                Debug.LogError("'Rockets Pool' must be not null!");
-                return;
-            }
+            _prefab.LogIfNull(nameof(_prefab));
             
             for (int i = 0; i < _initialInstancesCount; i++)
             {

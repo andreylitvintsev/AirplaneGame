@@ -29,19 +29,11 @@ namespace Enemy
 
         private void Start() // TODO: может awake?
         {
-            if (_attackTargets == null) // TODO: сделать extension
-            {
-                Debug.LogError("'Attack Targets' must be not null!");
-            }
-            
-            if (_rocketsPool == null)
-            {
-                Debug.LogError("'Rockets pool' must be not null!");
-            }
+            _attackTargets.LogIfNull(nameof(_attackTargets));
+            _rocketsPool.LogIfNull(nameof(_rocketsPool));
             
             _pathFollower = GetComponent<PathFollower>();
             _animationEventReceiver = GetComponent<AnimationEventReceiver>();
-            // _animationEventReceiver.OnEvent += OnAnimationEvent;
         }
 
         private void Update()

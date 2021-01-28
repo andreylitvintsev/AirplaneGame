@@ -17,10 +17,7 @@ namespace Common.Pool
         
         private void Update()
         {
-            if (_pool == null) // <--- похоже здесь ошибка
-            {
-                return;
-            }
+            _pool.LogIfNull(nameof(_pool));
             
             if (_spendTime >= _returnAfterSec)
             {

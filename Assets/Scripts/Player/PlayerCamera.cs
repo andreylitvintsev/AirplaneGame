@@ -50,19 +50,10 @@ namespace Player
 
         private void OnEnable()
         {
-            if (_playerController != null)
-            {
-                _playerController.AfterInputAdjusted += AfterPlayerInputAdjusted;
-            }
-            else
-            {
-                Debug.LogError("Player Controller is null", this);
-            }
+            _playerController.LogIfNull(nameof(_playerController));
+            _playerController.AfterInputAdjusted += AfterPlayerInputAdjusted;
             
-            if (_animator == null)
-            {
-                Debug.LogError("'Animator' must be not null!");
-            }
+            _animator.LogIfNull(nameof(_animator));
         }
 
         private void OnDisable()
