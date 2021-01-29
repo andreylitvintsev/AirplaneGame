@@ -9,6 +9,8 @@ namespace Common
     {
         private readonly ISet<T> _set = new HashSet<T>();
 
+        public event Action Changed;
+
         public IEnumerator<T> GetEnumerator()
         {
             return _set.GetEnumerator();
@@ -26,11 +28,13 @@ namespace Common
                 throw new ArgumentNullException(nameof(item));
             }
             _set.Add(item);
+            Changed?.Invoke();
         }
 
         public void Clear()
         {
             _set.Clear();
+            Changed?.Invoke();
         }
 
         public bool Contains(T item)
@@ -45,7 +49,12 @@ namespace Common
 
         public bool Remove(T item)
         {
-            return _set.Remove(item);
+            if (_set.Remove(item))
+            {
+                Changed?.Invoke();
+                return true;
+            }
+            return false;
         }
 
         public int Count => _set.Count;
@@ -54,7 +63,12 @@ namespace Common
 
         public bool Add(T item)
         {
-            return _set.Add(item);
+            if (_set.Add(item))
+            {
+                Changed?.Invoke();
+                return true;
+            }
+            return false;
         }
 
         public void ExceptWith(IEnumerable<T> other)

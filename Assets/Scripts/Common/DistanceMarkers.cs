@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using Common.Extensions;
 using Player;
 using TMPro;
@@ -20,7 +21,7 @@ namespace Common
         
         private Dictionary<Collider, TMP_Text> _distanceMarkerMap = new Dictionary<Collider, TMP_Text>();
         private Dictionary<Collider, Image> _outOfViewMarkerMap = new Dictionary<Collider, Image>();
-        
+
         private void Start()
         {
             _camera.LogIfNull(nameof(_camera));
@@ -29,6 +30,8 @@ namespace Common
             _distanceMarkerPrefab.LogIfNull(nameof(_distanceMarkerPrefab));
             _outOfViewMarkerPrefab.LogIfNull(nameof(_outOfViewMarkerPrefab));
             _player.LogIfNull(nameof(_player));
+
+            _enemiesSet.Changed += OnEnemySetChanged;
 
             CreateMarkers();
         }
@@ -91,6 +94,17 @@ namespace Common
         private bool IsCameraCanSee(Collider @object)
         {
             return GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(_camera), @object.bounds);
+        }
+
+        private void OnEnemySetChanged()
+        {
+            var killedEnemy = _distanceMarkerMap
+                .FirstOrDefault(mapEntry => !mapEntry.Key.gameObject.activeSelf).Key;
+            
+            _distanceMarkerMap[killedEnemy].gameObject.SetActive(false);
+            _distanceMarkerMap.Remove(killedEnemy);
+            _outOfViewMarkerMap[killedEnemy].gameObject.SetActive(false);
+            _outOfViewMarkerMap.Remove(killedEnemy);
         }
     }
 }

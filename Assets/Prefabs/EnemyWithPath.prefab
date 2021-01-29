@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0adfdd30b9228374e916dd21d57c5b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FromBounds: {x: 0, y: 0, z: 0}
-  ToBounds: {x: 30, y: 30, z: 30}
-  pointCount: 4
+  _fromBounds: {x: -100, y: -30, z: -100}
+  _toBounds: {x: 100, y: 50, z: 100}
+  pointCount: 6
 --- !u!1001 &252180544508436528
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,11 +15,11 @@ MonoBehaviour:
   _longitudinalRollSpeed: 60
   _lateralRollSpeed: 60
   _defaultSpeed: 5
-  _acceleratedSpeed: 10
+  _acceleratedSpeed: 30
   _invertHorizontal: 1
   _invertVertical: 0
   _attackTargets: {fileID: 11400000, guid: 341b6336de2bd0645be9c55158060641, type: 2}
-  _reloadDelayInSeconds: 2
+  _reloadDelayInSeconds: 1
   _rocketsPool: {fileID: 0}
 --- !u!1001 &2015406389736228567
 PrefabInstance:
