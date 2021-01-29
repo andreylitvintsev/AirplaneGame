@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Common.Extensions;
+using UnityEngine;
 
 namespace Common.Pool
 {
