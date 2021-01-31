@@ -18,9 +18,10 @@ MonoBehaviour:
   _acceleratedSpeed: 30
   _invertHorizontal: 1
   _invertVertical: 0
-  _attackTargets: {fileID: 11400000, guid: 341b6336de2bd0645be9c55158060641, type: 2}
   _reloadDelayInSeconds: 1
   _rocketsPool: {fileID: 0}
+  _fromBounds: {fileID: 11400000, guid: c684c1ad7e956444f974039771188c61, type: 2}
+  _toBounds: {fileID: 11400000, guid: 5c2c73fa8745a1d48a4f6153f07f2a63, type: 2}
 --- !u!1001 &2015406389736228567
 PrefabInstance:
   m_ObjectHideFlags: 0

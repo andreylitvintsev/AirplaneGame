@@ -1,6 +1,7 @@
 ﻿using System;
 using Game.Pool;
 using Game.RuntimeSet;
+using Game.Variable;
 using UnityEngine;
 
 namespace Game.Player
@@ -20,9 +21,12 @@ namespace Game.Player
         [SerializeField] private bool _invertVertical = false;
         
         [Header("Attack")]
-        [SerializeField] private ColliderRuntimeSet _attackTargets;
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
+
+        [Header("Flying Area")] 
+        [SerializeField] private Vector3Variable _fromBounds = null;
+        [SerializeField] private Vector3Variable _toBounds = null;
 
         private RocketLauncher _rocketLauncher = null;
         
@@ -49,7 +53,10 @@ namespace Game.Player
             );
             var cachedTransform = transform;
             cachedTransform.Rotate(rotateAngles);
-            cachedTransform.position += cachedTransform.forward * _speed * deltaTime;
+            Vector3 newPosition = cachedTransform.position + cachedTransform.forward * _speed * deltaTime;
+            newPosition = Vector3.Max(_fromBounds.Value, newPosition);
+            newPosition = Vector3.Min(_toBounds.Value, newPosition);
+            cachedTransform.position = newPosition;
 
             TryAttack();
             ManipulateAcceleration();
@@ -73,6 +80,13 @@ namespace Game.Player
         public void Damage()
         {
             Debug.Log("Конец игры");
+        }
+        
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            var gizmoCubeBounds = _fromBounds.ToBounds(_toBounds);
+            Gizmos.DrawWireCube(gizmoCubeBounds.center, gizmoCubeBounds.size);
         }
 
         public GameObjectsPool RocketsPool => _rocketsPool;

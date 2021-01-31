@@ -39,10 +39,8 @@ namespace Game.Enemy
 
         private void OnDrawGizmosSelected()
         {
-            var gizmoCubeBounds = new Bounds();
-            gizmoCubeBounds.Encapsulate(_fromBounds.Value);
-            gizmoCubeBounds.Encapsulate(_toBounds.Value);
             Gizmos.color = Color.red;
+            var gizmoCubeBounds = _fromBounds.ToBounds(_toBounds);
             Gizmos.DrawWireCube(gizmoCubeBounds.center, gizmoCubeBounds.size);
         }
     }
