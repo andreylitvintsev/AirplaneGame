@@ -110,7 +110,7 @@ namespace Game
                 _outOfViewMarkerMap[killedEnemy].gameObject.SetActive(false);
                 _outOfViewMarkerMap.Remove(killedEnemy);
             }
-            catch (Exception a)
+            catch (Exception)
             {
                 // ignored
             }

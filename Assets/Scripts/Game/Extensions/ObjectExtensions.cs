@@ -2,7 +2,7 @@
 
 namespace Game.Extensions
 {
-    public static class ComponentExtensions
+    public static class ObjectExtensions
     {
         public static void LogIfNull(this Object component, string variableName)
         {
