@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using Game.Extensions;
@@ -99,13 +100,20 @@ namespace Game
 
         private void OnEnemySetChanged()
         {
-            var killedEnemy = _distanceMarkerMap
+            try
+            {
+                var killedEnemy = _distanceMarkerMap
                 .FirstOrDefault(mapEntry => !mapEntry.Key.gameObject.activeSelf).Key;
             
-            _distanceMarkerMap[killedEnemy].gameObject.SetActive(false);
-            _distanceMarkerMap.Remove(killedEnemy);
-            _outOfViewMarkerMap[killedEnemy].gameObject.SetActive(false);
-            _outOfViewMarkerMap.Remove(killedEnemy);
+                _distanceMarkerMap[killedEnemy].gameObject.SetActive(false);
+                _distanceMarkerMap.Remove(killedEnemy);
+                _outOfViewMarkerMap[killedEnemy].gameObject.SetActive(false);
+                _outOfViewMarkerMap.Remove(killedEnemy);
+            }
+            catch (Exception a)
+            {
+                // ignored
+            }
         }
     }
 }
