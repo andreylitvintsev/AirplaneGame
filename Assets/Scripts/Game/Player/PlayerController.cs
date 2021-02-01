@@ -3,6 +3,7 @@ using Game.Pool;
 using Game.RuntimeSet;
 using Game.Variable;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Game.Player
 {
@@ -79,7 +80,7 @@ namespace Game.Player
 
         public void Damage()
         {
-            Debug.Log("Конец игры");
+            SceneManager.LoadScene("GameOverScene");
         }
         
         private void OnDrawGizmosSelected()
