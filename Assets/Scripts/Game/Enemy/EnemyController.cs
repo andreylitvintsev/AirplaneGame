@@ -14,6 +14,7 @@ namespace Game.Enemy
         [SerializeField, Min(0f)] private float _reloadDelayInSeconds = 0f;
         [SerializeField] private GameObjectsPool _rocketsPool;
         [SerializeField] private Animator _animator;
+        [SerializeField, Min(0f)] private float _sphereCastRadiusForEnemyCheck = 0.5f;
         
         private PathFollower _pathFollower;
         private AnimationEventReceiver _animationEventReceiver;
@@ -46,15 +47,13 @@ namespace Game.Enemy
         {
             var cachedTransform = transform;
             var raycastRay = new Ray(cachedTransform.position, cachedTransform.forward);
-            foreach (var attackTarget in _attackTargets)
+            if (Physics.SphereCast(raycastRay, _sphereCastRadiusForEnemyCheck, out var hit) 
+                && _attackTargets.Contains(hit.collider))
             {
-                if (attackTarget.Raycast(raycastRay, out _, float.PositiveInfinity))
-                {
-                    _rocketLauncher.TryLaunchRocket();
-                }
+                _rocketLauncher.TryLaunchRocket();
             }
         }
-        
+
         public void Damage()
         {
             if (Killed) return;
@@ -67,7 +66,12 @@ namespace Game.Enemy
         {
             gameObject.SetActive(false);
         }
-
+        
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, _sphereCastRadiusForEnemyCheck);
+        }
 
         public GameObjectsPool RocketsPool => _rocketsPool;
 
