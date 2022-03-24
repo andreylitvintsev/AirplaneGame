@@ -18,5 +18,13 @@ namespace Game.Extensions
         {
             return Quaternion.Euler(0f, 0f, z) * vector3;
         }
+        
+        public static Bounds ToBounds(this Vector3 point, Vector3 anotherPoint)
+        {
+            var bounds = new Bounds();
+            bounds.Encapsulate(point);
+            bounds.Encapsulate(anotherPoint);
+            return bounds;
+        }
     }
 }

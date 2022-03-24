@@ -1,7 +1,6 @@
 ﻿using System;
+using Game.Extensions;
 using Game.Pool;
-using Game.RuntimeSet;
-using Game.Variable;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,8 +25,8 @@ namespace Game.Player
         [SerializeField] private GameObjectsPool _rocketsPool;
 
         [Header("Flying Area")] 
-        [SerializeField] private Vector3Variable _fromBounds = null;
-        [SerializeField] private Vector3Variable _toBounds = null;
+        [SerializeField] private Vector3 _fromBounds = Vector3.zero;
+        [SerializeField] private Vector3 _toBounds = Vector3.zero;
 
         private RocketLauncher _rocketLauncher = null;
         
@@ -55,8 +54,8 @@ namespace Game.Player
             var cachedTransform = transform;
             cachedTransform.Rotate(rotateAngles);
             Vector3 newPosition = cachedTransform.position + cachedTransform.forward * _speed * deltaTime;
-            newPosition = Vector3.Max(_fromBounds.Value, newPosition);
-            newPosition = Vector3.Min(_toBounds.Value, newPosition);
+            newPosition = Vector3.Max(_fromBounds, newPosition);
+            newPosition = Vector3.Min(_toBounds, newPosition);
             cachedTransform.position = newPosition;
 
             TryAttack();

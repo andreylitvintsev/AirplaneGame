@@ -1,4 +1,4 @@
-﻿using Game.Variable;
+﻿using Game.Extensions;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,8 +7,8 @@ namespace Game.Enemy
     [RequireComponent(typeof(PathCreation.PathCreator))]
     public class EnemyPathCreator : MonoBehaviour
     {
-        [SerializeField] private Vector3Variable _fromBounds = null;
-        [SerializeField] private Vector3Variable _toBounds = null;
+        [SerializeField] private Vector3 _fromBounds = Vector3.zero;
+        [SerializeField] private Vector3 _toBounds = Vector3.zero;
         [SerializeField, Min(2)] private int pointCount = 2;
 
         private void Start()
@@ -28,12 +28,10 @@ namespace Game.Enemy
 
         private Vector3 RandomPoint()
         {
-            var fromBoundsValue = _fromBounds.Value;
-            var toBoundsValue = _toBounds.Value;
             return new Vector3(
-                Random.Range(fromBoundsValue.x, toBoundsValue.x),
-                Random.Range(fromBoundsValue.y, toBoundsValue.y),
-                Random.Range(fromBoundsValue.z, toBoundsValue.z)
+                Random.Range(_fromBounds.x, _toBounds.x),
+                Random.Range(_fromBounds.y, _toBounds.y),
+                Random.Range(_fromBounds.z, _toBounds.z)
             );
         }
 
